@@ -38,7 +38,7 @@
       <recent name="F:\Documents\GitHub\IS-Term-Project\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rename_images (1)">
+  <component name="RunManager" selected="Python.dataset">
     <configuration name="dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="imageclassifier" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,10 +125,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dataset" />
         <item itemvalue="Python.rename_images (1)" />
         <item itemvalue="Python.rename_images (1)" />
         <item itemvalue="Python.rename_images" />
-        <item itemvalue="Python.dataset" />
       </list>
     </recent_temporary>
   </component>
@@ -158,25 +158,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581641937050" />
-    <state width="1899" height="276" key="GridCell.Tab.0.bottom" timestamp="1583514364105">
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom" timestamp="1586485667609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583514364105" />
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586485667609" />
     <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582599350722" />
-    <state width="1899" height="276" key="GridCell.Tab.0.center" timestamp="1583514364105">
+    <state width="1899" height="276" key="GridCell.Tab.0.center" timestamp="1586485667608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583514364105" />
+    <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586485667608" />
     <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582599350722" />
-    <state width="1899" height="276" key="GridCell.Tab.0.left" timestamp="1583514364105">
+    <state width="1899" height="276" key="GridCell.Tab.0.left" timestamp="1586485667608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583514364105" />
+    <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586485667608" />
     <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582599350722" />
-    <state width="1899" height="276" key="GridCell.Tab.0.right" timestamp="1583514364105">
+    <state width="1899" height="276" key="GridCell.Tab.0.right" timestamp="1586485667608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583514364105" />
+    <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586485667608" />
     <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582599350722" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1583388723986">
       <screen x="0" y="0" width="1920" height="1040" />
