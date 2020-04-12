@@ -14,19 +14,16 @@ path_to_zip = tf.keras.utils.get_file('cats_and_dogs.zip', origin=_URL, extract=
 
 PATH = os.path.join(os.path.dirname(path_to_zip), 'cats_and_dogs_filtered')
 
-batch_size = 128
+batch_size = 32
 epochs = 15
 IMG_SIZE = 150 # width and height
 
-# Nicholas' Watson images
-WATSON_PATH = './watson/'
+# train_x = pickle.load(open('train_x.pickle', 'rb'))
+# train_y = pickle.load(open('train_y.pickle', 'rb'))
+# test_x = pickle.load(open('test_x.pickle', 'rb'))
+# test_y = pickle.load(open('test_y.pickle', 'rb'))
 
-watson = []
-for i in os.listdir(WATSON_PATH):
-    watson.append(tf.keras.preprocessing.image.load_img(f'{WATSON_PATH}{i}', grayscale=False, color_mode='rgb', target_size=(IMG_SIZE,IMG_SIZE), interpolation='nearest'))
-
-# watson[0].show()
-
+print(PATH)
 train_dir = os.path.join(PATH, 'train')
 validation_dir = os.path.join(PATH, 'validation')
 
@@ -41,25 +38,19 @@ num_dogs_tr = len(os.listdir(train_dogs_dir))
 num_cats_val = len(os.listdir(validation_cats_dir))
 num_dogs_val = len(os.listdir(validation_dogs_dir))
 
-# Nicholas' Watson images
-num_watson = len(watson)
 
 total_train = num_cats_tr + num_dogs_tr
 total_val = num_cats_val + num_dogs_val
 
-#total prediction?
-total_predict = num_watson
 
 print('total training cat images:', num_cats_tr)
 print('total training dog images:', num_dogs_tr)
-print('total watson images:', num_watson)
 
 print('total validation cat images:', num_cats_val)
 print('total validation dog images:', num_dogs_val)
 print("--")
 print("Total training images:", total_train)
 print("Total validation images:", total_val)
-print("Total prediction images:", total_predict)
 
 train_image_generator = ImageDataGenerator(rescale=1./255) # Generator for our training data
 validation_image_generator = ImageDataGenerator(rescale=1./255) # Generator for our validation data
@@ -75,14 +66,7 @@ val_data_gen = validation_image_generator.flow_from_directory(batch_size=batch_s
                                                               target_size=(IMG_SIZE, IMG_SIZE),
                                                               class_mode='binary')
 
-# predict_data_gen = prediction_image_generator.flow_from_directory(batch_size=batch_size,
-#                                                                   directory=WATSON_PATH,
-#                                                                   shuffle=True,
-#                                                                   target_size=(IMG_SIZE, IMG_SIZE),
-#                                                                   class_mode='binary')
-
 sample_training_images, _ = next(train_data_gen)
-# predict_images, _ = next(predict_data_gen)
 
 # This function will plot images in the form of a grid with 1 row and 5 columns where images are placed in each column.
 def plotImages(images_arr):
@@ -96,7 +80,7 @@ def plotImages(images_arr):
 
 # shows us the first 5 images of the training images
 plotImages(sample_training_images[:5])
-plotImages(watson[:5])
+# plotImages(watson[:5])
 
 model = Sequential([
     Conv2D(16, 3, padding='same', activation='relu', input_shape=(IMG_SIZE, IMG_SIZE, 3)),
@@ -124,6 +108,7 @@ history = model.fit_generator(
     validation_steps=total_val // batch_size
 )
 
+model.save('cnn.model')
 
 acc = history.history['accuracy']
 val_acc = history.history['val_accuracy']
@@ -132,6 +117,9 @@ loss = history.history['loss']
 val_loss = history.history['val_loss']
 
 epochs_range = range(epochs)
+
+# evaluation = model.predict(test_x)
+# print(evaluation)
 
 plt.figure(figsize=(8, 8))
 plt.subplot(1, 2, 1)
@@ -161,8 +149,6 @@ plt.title('Training and Validation Loss')
 
 plt.show()
 
-evaluation = model.evaluate(watson, batch_size=batch_size)
-print(evaluation)
 with open('itworks.txt', 'r') as f:
     for line in f.readlines():
         print(line)

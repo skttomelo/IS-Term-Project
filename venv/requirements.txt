@@ -1,4 +1,6 @@
 numpy
 tensorflow
 Pillow
+cv2
+pickle
 matplotlib

@@ -1,2 +1,16 @@
 /venv/Lib/
-/watson/
+/venv/PetImages/
+/venv/human/
+/venv/Test/
+/venv/train_x.pickle
+/venv/train_y.pickle
+/venv/test_x.pickle
+/venv/test_y.pickle
+/venv/train_x_PIL.pickle
+/venv/train_y_PIL.pickle
+/venv/cnn.model/
+/venv/Cat_Dog_CNN_128_batch_1586637972.model/
+/venv/Cat_Dog_CNN_32_batch_1586646832.model/
+/venv/Cat_Dog_CNN_32_batch_1586653331.model/
+/venv/cnn-32-batch-no-aug.model/
+/venv/logs/
